@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DictionMaster</string>
+    <string name="english_label">ENGLISH</string>
+    <string name="type_a_word_label">Type a word...</string>
+    <string name="search_label">SEARCH</string>
+    <string name="something_went_wrong_label">Something went wrong :(</string>
+    <string name="reload_label">Reload</string>
+    <string name="retry_label">Try again</string>
+    <string name="phonetic_button_cd">Click to listen the word\'s phonetic</string>
+    <string name="try_another_search_now">Try another search now!</string>
+    <string name="new_search_label">New Search</string>
+    <string name="thats_it_label">That\'s it for &quot;%s&quot;!</string>
+    <string name="loading_phonetic_cd">Loading phonetic</string>
+    <string name="no_definition_error">There is no definition for the word &quot;%s&quot;.</string>
+    <string name="subscribe_now_label">Subscribe now to get unlimited searches and full access to all features.</string>
+    <string name="tryal_label">Try 7 Days Free, then only $19,99 per year. Cancel anytime.</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="no_audio_available_label">No audio available for this word</string>
+    <string name="no_phonetic_available_label">No phonetic available for this word</string>
+    <string name="by_caio_santos">By Caio Santos</string>
+    <string name="definition_item">%1$d) %2$s</string>
+</resources>

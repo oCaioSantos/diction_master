@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/separator_line"
+        android:layout_alignParentTop="true"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/tvWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/dark_blue"
+            android:textSize="45sp"
+            tools:text="Education" />
+
+        <com.example.dictionmaster.ui.components.PhoneticButton
+            android:id="@+id/button_phonetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvWord"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvPhonetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/button_phonetic"
+            android:layout_alignBottom="@id/button_phonetic"
+            android:layout_marginStart="11sp"
+            android:layout_toEndOf="@id/button_phonetic"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:textColor="@color/dark_blue_40"
+            android:textSize="22sp"
+            tools:text="/ˌɛdjʊˈkeɪʃn̩/" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDefinitions"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_phonetic"
+            android:layout_marginTop="25dp"
+            tools:itemCount="30"
+            tools:listitem="@layout/item_definition_layout" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separator_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layoutNewSearchContainer"
+        android:background="@color/dark_blue_10" />
+
+    <RelativeLayout
+        android:id="@+id/layoutNewSearchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/thats_it_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/dark_blue"
+            android:textSize="24sp"
+            tools:text="@string/thats_it_label" />
+
+        <TextView
+            android:id="@+id/try_another_search_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thats_it_text"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/try_another_search_now"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_new_search"
+            style="@style/CustomButton"
+            android:layout_below="@id/try_another_search_now"
+            android:layout_marginTop="20dp"
+            android:text="@string/new_search_label" />
+
+    </RelativeLayout>
+
+    <com.example.dictionmaster.ui.components.ErrorView
+        android:id="@+id/layoutErrorContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

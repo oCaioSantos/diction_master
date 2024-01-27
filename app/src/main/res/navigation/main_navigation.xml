@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.dictionmaster.ui.fragments.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/fromSearchToDefinition"
+            app:destination="@id/definitionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/definitionFragment"
+        android:name="com.example.dictionmaster.ui.fragments.DefinitionFragment"
+        android:label="DefinitionFragment"
+        tools:layout="@layout/definition_fragment" >
+        <action
+            android:id="@+id/fromDefinitionToSearch"
+            app:destination="@id/searchFragment" />
+        <argument
+            android:name="word"
+            app:argType="string" />
+        <action
+            android:id="@+id/fromDefinitionToPricing"
+            app:destination="@id/pricingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pricingFragment"
+        tools:layout="@layout/pricing_fragment"
+        android:name="com.example.dictionmaster.ui.fragments.PricingFragment"
+        android:label="PricingFragment" >
+        <action
+            android:id="@+id/fromPricingToSearch"
+            app:destination="@id/searchFragment" />
+    </fragment>
+</navigation>

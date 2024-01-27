@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/button_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_icon_phonetic"
+        android:contentDescription="@string/phonetic_button_cd"
+        android:padding="12dp"
+        android:src="@drawable/audio_speaker_on" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_icon_phonetic"
+        android:contentDescription="@string/loading_phonetic_cd"
+        android:indeterminateTint="@color/white"
+        android:padding="12dp" />
+</RelativeLayout>
